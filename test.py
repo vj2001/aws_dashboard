@@ -83,11 +83,11 @@
 # ec2 = boto3.client('ec2')
 
 # instances = ec2.run_instances(
-#     ImageId='ami-04505e74c0741db8d',
+#     ImageId='ami-04505e74c0741db8d',                     ubuntu
 #     MinCount=1,
 #     MaxCount=1,
 #     InstanceType='t2.micro',
-#     SecurityGroupIds= ['sg-0be1291dabfeeface']
+#     SecurityGroupIds= ['sg-0be1291dabfeeface']           security-wizard-2
 # )
 # for instance in ec2.instances:
 #     print(f'EC2 instance "{instance.id}" has been launched')

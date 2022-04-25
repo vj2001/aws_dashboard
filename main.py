@@ -1,6 +1,5 @@
-from crypt import methods
-import math
 import boto3
+import os
 from botocore.exceptions import ClientError
 from flask import Flask, redirect,render_template,request, url_for
 app = Flask(__name__)
@@ -116,12 +115,12 @@ def stop_instances():
 def users():
         # Create IAM client
         iam = boto3.client('iam')
-
+        
         # List users with the pagination interface
         paginator = iam.get_paginator('list_users')
         response = paginator.paginate()
         return response
-
+    
 
 #7. Creating IAM user
 
@@ -151,4 +150,5 @@ def getBuckets():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
