@@ -1,16 +1,16 @@
 {% extends 'index.html'%} {% block content%}
 <div class="container-fluid mt-5">
-            <form action="/terminate" method="POST">
+            <form action="/terminate" class="mb-3" method="POST">
                 <table border="1">
                 <tr><td>
-                    <label htmlFor="id">InstanceId:</label>
+                    <label htmlFor="id" class="form-label">InstanceId:</label>
                 </td>
                     <td>
-                        <input type="text" name="id" required/><br>
+                        <input type="text" name="id" class="form-control" required/><br>
                     </td></tr>
                             
                </table> <br><br>
-                          <input type="submit" value="Terminate Instance">
+                          <input type="submit" class="btn btn-primary" value="Terminate Instance">
             </form>
             </div>
 

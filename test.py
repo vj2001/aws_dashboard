@@ -96,3 +96,14 @@
 # instance_id = 'i-0e7dc2689985f4ba2'
 # print(len(ec2.describe_instances().get('Reservations')))
 # ec2.terminate_instances(InstanceIds=[instance_id])
+
+
+
+
+# --Command to run container
+# docker run --name aws -p 5000:5000 -e AWS_ACCESS_KEY_ID=AKIASGW66NBFCWYDS2N4 
+# -e AWS_SECRET_ACCESS_KEY=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 
+# -e AWS_DEFAULT_REGION=us-east-1 aws_boto 
+
+
+# pm2 start main.py --interpreter /usr/bin/python3

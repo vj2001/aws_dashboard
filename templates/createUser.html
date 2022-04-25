@@ -1,16 +1,16 @@
 {% extends 'index.html'%} {% block content%}
 <div class="container-fluid mt-5">
-            <form action="/createUser" method="POST">
+            <form action="/createUser" class="mb-3" method="POST">
                 <table border="1">
                 <tr><td>
-                    <label htmlFor="name">UserName:</label>
+                    <label htmlFor="name" class="form-label">Username:</label>
                 </td>
                     <td>
-                        <input type="text" name="name" required/><br>
+                        <input type="text" name="name" class="form-control" required/><br>
                     </td></tr>
                             
                </table> <br><br>
-                          <input type="submit" value="Create User">
+                          <input type="submit" class="btn btn-primary" value="Create User">
             </form>
             </div>
 

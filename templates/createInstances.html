@@ -1,30 +1,30 @@
 {% extends 'index.html'%} {% block content%}
 <div class="container-fluid mt-5">
-            <form action="/create" method="POST">
+            <form action="/create" class="mb-3" method="POST">
                 <table border="2">
                 <tr><td>
-                    <label htmlFor="image">ImageId:</label>
+                    <label htmlFor="image" class='form-label'>ImageId:</label>
                 </td>
                     <td>
-                        <input type="text" name="image" required/><br>
+                        <input type="text" name="image" class="form-control" required/><br>
                     </td></tr>
                
                     <tr><td>
-                        <label htmlFor="type">Instance Type:</label>
+                        <label htmlFor="type" class='form-label'>Instance Type:</label>
                     </td>
                         <td>
-                            <input type="text" name="type" required/><br>
+                            <input type="text" name="type" class="form-control" required/><br>
                         </td></tr>
 
                         <tr><td>
-                            <label htmlFor="group">Security Group id:</label>
+                            <label htmlFor="group" class='form-label'>Security Group id:</label>
                         </td>
                             <td>
-                                <input type="text" name="group" required/><br>
+                                <input type="text" name="group" class="form-control" required/><br>
                             </td></tr>
                             
                </table> <br><br>
-                          <input type="submit" value="Create Instance">
+                          <input type="submit" class="btn btn-primary" value="Create Instance">
             </form>
         </div>
 

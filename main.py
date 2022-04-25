@@ -118,11 +118,11 @@ def users():
         
         # List users with the pagination interface
         paginator = iam.get_paginator('list_users')
-        response = paginator.paginate()
-        return response
-    
+        for response in paginator.paginate():
+         print(response)
+        return render_template("message.html",message="User list fetched")
 
-#7. Creating IAM user
+#7  . Creating IAM user
 
 @app.route('/createUser',methods=["POST","GET"])
 def createUser():
@@ -150,5 +150,6 @@ def getBuckets():
 
 
 if __name__ == '__main__':
+    # adding environment port
     port = int(os.environ.get('PORT', 5000))
     app.run(debug=True, host='0.0.0.0', port=port)
