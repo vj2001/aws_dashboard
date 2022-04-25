@@ -1,0 +1,17 @@
+{% extends 'index.html'%} {% block content%}
+<div class="container-fluid mt-5">
+            <form action="/createUser" method="POST">
+                <table border="1">
+                <tr><td>
+                    <label htmlFor="name">UserName:</label>
+                </td>
+                    <td>
+                        <input type="text" name="name" required/><br>
+                    </td></tr>
+                            
+               </table> <br><br>
+                          <input type="submit" value="Create User">
+            </form>
+            </div>
+
+{% endblock content %}
