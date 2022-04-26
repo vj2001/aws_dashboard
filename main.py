@@ -1,7 +1,6 @@
 import boto3
 import os
 from botocore.exceptions import ClientError
-from django.shortcuts import render
 from flask import Flask, redirect,render_template,request, url_for
 app = Flask(__name__)
 
