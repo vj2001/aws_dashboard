@@ -20,10 +20,12 @@
    **Run python3 main.py**
    
 4. Build the docker image using Dockerfile
-  
-5. Run the container using port binding and env variables
+
+5. Create access keys in AWS console
+
+6. Run the container using port binding and access keys as env variables
  
-6. Push the image to DockerHub.
+7. Push the image to DockerHub.
 
 *Project Github URL*: &nbsp; **https://github.com/vj2001/aws_dashboard**</br>
 *Dockerhub URL*:&nbsp;&nbsp; **https://hub.docker.com/repository/docker/vishalj123/aws_boto**
@@ -44,3 +46,5 @@
 ![s3](https://user-images.githubusercontent.com/42600392/165296157-276abe7d-d0b7-4a2e-bbfd-5b42103827a3.png)
 **S3 Services:
 1. List all Buckets
+
+**Happy development !!**
