@@ -1,3 +1,6 @@
+## Documentation
+
+
 # List the ec2 instances
 
 # import boto3
@@ -105,5 +108,19 @@
 # -e AWS_SECRET_ACCESS_KEY=MaatFACJi5ebJXhQqOfEdryk9OzNfiuv3plKk8iX 
 # -e AWS_DEFAULT_REGION=us-east-1 aws_boto 
 
+# For outside localhost-
+                #1.  if __name__ == '__main__':
+                #    #adding environment port
+                #     port = int(os.environ.get('PORT', 5000))
+                #     app.run(debug=True, host='0.0.0.0', port=port)
 
+
+                #2.  # ec2 = boto3.client('ec2',
+                #                 region_name="",
+                #                   access_key=<key>,
+                #                         secret=<secret>)
+
+#Run pm2 in ec2:-
 # pm2 start main.py --interpreter /usr/bin/python3
+
+# ---------------------------------
