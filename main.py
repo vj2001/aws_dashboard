@@ -1,6 +1,7 @@
 import boto3
 import os
 from botocore.exceptions import ClientError
+from django.shortcuts import render
 from flask import Flask, redirect,render_template,request, url_for
 app = Flask(__name__)
 
@@ -15,9 +16,12 @@ def index():
 
 @app.route('/show')
 def get_instances():
-    ec2 = boto3.client('ec2',region_name='us-east-1')
-    response = ec2.describe_instances() 
-    return response
+    ec2 = boto3.resource('ec2',region_name='us-east-1')
+    instances= ec2.instances.all()
+    if not(instances):
+     return render_template("message.html",message="No Instances running. Create a instance first")
+
+    return render_template("showInstances.html",instances=instances)
 
 # 2. creating the ec2 instance
 
@@ -115,14 +119,16 @@ def stop_instances():
 def users():
         # Create IAM client
         iam = boto3.client('iam')
-        
+        users=list()
         # List users with the pagination interface
-        paginator = iam.get_paginator('list_users')
-        for response in paginator.paginate():
-         print(response)
-        return render_template("message.html",message="User list fetched")
+        # paginator = iam.get_paginator('list_users')
+        users = iam.list_users()['Users']
+        if len(users)==0:
+         return render_template("message.html",message="No Users. Create a user first")
 
-#7  . Creating IAM user
+        return render_template("showUsers.html",users=users)
+
+#7.  Creating IAM user
 
 @app.route('/createUser',methods=["POST","GET"])
 def createUser():
@@ -145,8 +151,11 @@ def createUser():
 def getBuckets():
     # Retrieve the list of existing buckets
     s3 = boto3.client('s3')
-    response = s3.list_buckets()
-    return response
+    buckets = s3.list_buckets()
+    if len(buckets["Buckets"])==0:
+        return render_template("message.html",message="No buckets. Create a bucket first")
+    
+    return render_template("showBuckets.html",buckets=buckets)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,21 @@
+{% extends 'index.html'%} {% block content%}
+<div class="container-fluid mt-5">
+            <table border="2" class="table table-dark table-striped">
+                <thead>
+                    <th>UserId</th>
+                    <th>UsrName</th>
+                    <th>ARN</th>
+                    <th>Creation Time</th>
+                </thead>
+                {%for user in users:%}
+                  <tr>
+                      <td>{{user.UserId}}</td>
+                      <td>{{user.UserName}}</td>
+                      <td>{{user.Arn}}</td>
+                      <td>{{user.CreateDate}}</td>
+                  </tr>
+                  {%endfor%}
+            </table>
+            </div>
+
+{% endblock content %}

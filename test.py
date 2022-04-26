@@ -101,8 +101,8 @@
 
 
 # --Command to run container
-# docker run --name aws -p 5000:5000 -e AWS_ACCESS_KEY_ID=AKIASGW66NBFCWYDS2N4 
-# -e AWS_SECRET_ACCESS_KEY=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 
+# docker run --name aws -p 5000:5000 -e AWS_ACCESS_KEY_ID=AKIASGW66NBFMUM3I5NS
+# -e AWS_SECRET_ACCESS_KEY=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 
 # -e AWS_DEFAULT_REGION=us-east-1 aws_boto 
 
 

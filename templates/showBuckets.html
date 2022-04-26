@@ -1,0 +1,22 @@
+{% extends 'index.html'%} {% block content%}
+<div class="container-fluid mt-5">
+            <table border="2" class="table table-dark table-striped">
+                <thead>
+                    <th>Bucket Name</th>
+                    <th>Owner</th>
+                    <th>Owner ID</th>
+                    <th>Creation Time</th>
+
+                </thead>
+                {%for bucket in buckets["Buckets"]:%}
+                  <tr>
+                      <td>{{bucket.Name}}</td>
+                      <td>{{buckets["Owner"].DisplayName}}</td>
+                      <td>{{buckets["Owner"].ID}}</td>
+                      <td>{{bucket.CreationDate}}</td>
+                  </tr>
+                  {%endfor%}
+            </table>
+            </div>
+
+{% endblock content %}
