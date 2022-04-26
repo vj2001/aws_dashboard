@@ -1,4 +1,4 @@
-Creating AWS dashboard using Boto3 API
+# Creating AWS dashboard using Boto3 API
 
 1. Clone the repository
 2. Run the command- 
