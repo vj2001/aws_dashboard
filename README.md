@@ -29,7 +29,7 @@
 *Dockerhub URL*:&nbsp;&nbsp; **https://hub.docker.com/repository/docker/vishalj123/aws_boto**
 
 ![ec2](https://user-images.githubusercontent.com/42600392/165295955-a07f6b51-fa0e-4c82-9f96-71cb7bdb45b4.png)
-**Services:
+**ec2 Services:
 1. Create Instance
 2. Start Instance
 3. Stop Instance
@@ -37,10 +37,10 @@
 5. Show Instance
 
 ![iam](https://user-images.githubusercontent.com/42600392/165296085-967e370a-e68f-4f34-b66a-182ff432791d.png)
-**Services:
+**IAM Services:
 1. List users
 2. Create IAM user
 
 ![s3](https://user-images.githubusercontent.com/42600392/165296157-276abe7d-d0b7-4a2e-bbfd-5b42103827a3.png)
-**Services:
+**S3 Services:
 1. List all Buckets
