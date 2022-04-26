@@ -47,5 +47,4 @@
 **S3 Services**:
 1. List all Buckets
 
-**-------------------------**
-*Happy development !!*
+*--------Happy development !!-------------*
